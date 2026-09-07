@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "dbmee",
+	"version": "${version}",
+	"name": "Don't Break My Ender Eyes",
+	"description": "Makes thrown Eyes of Ender never break. Configurable shatter chance.",
+	"authors": [
+		"3C Team"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/dont-break-my-ender-eyes",
+		"issues": "https://github.com/3ColumnsC/DontBreakMyEnderEyes/issues",
+		"sources": "https://github.com/3ColumnsC/DontBreakMyEnderEyes"
+	},
+	"license": "MIT",
+	"icon": "assets/dbmee/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.threecolumnsstudio.dontbreakmyendereyes.fabric.DBMEEFabric"
+		]
+	},
+	"mixins": [
+		"dbmee.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": ">=0.157.0"
+	}
+}
