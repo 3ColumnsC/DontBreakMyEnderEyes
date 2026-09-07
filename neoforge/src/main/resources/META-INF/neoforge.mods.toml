@@ -1,7 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
 license = "MIT"
-issueTrackerURL = "https://github.com/3ColumnsC/DontBreakMyEnderEyes/issues"
 
 [[mods]]
 modId = "dbmee"
@@ -9,9 +8,7 @@ version = "${file.jarVersion}"
 displayName = "Don't Break My Ender Eyes"
 authors = "3C Team"
 description = "Makes thrown Eyes of Ender never break. Configurable shatter chance."
-iconFile = "assets/dbmee/icon.png"
-bannerFile = "assets/dbmee/icon.png"
-displayURL = "https://www.curseforge.com/minecraft/mc-mods/dont-break-my-ender-eyes"
+logoFile = "assets/dbmee/icon.png"
 
 [[mixins]]
 config = "dbmee.mixins.json"
@@ -19,13 +16,13 @@ config = "dbmee.mixins.json"
 [[dependencies.dbmee]]
 modId = "neoforge"
 type = "required"
-versionRange = "[26.2,)"
+versionRange = "[21.11,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.dbmee]]
 modId = "minecraft"
 type = "required"
-versionRange = "[26.2,)"
+versionRange = "[1.21.11,)"
 ordering = "NONE"
 side = "BOTH"

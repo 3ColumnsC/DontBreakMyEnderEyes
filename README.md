@@ -22,6 +22,7 @@ Examples:
 - `0.0` — never break (mod default)
 - `0.2` — vanilla (20% chance to break)
 - `1.0` — always break
+
 ---
 
 ## 📦 Requirements
