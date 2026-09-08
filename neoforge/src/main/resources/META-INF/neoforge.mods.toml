@@ -16,13 +16,13 @@ config = "dbmee.mixins.json"
 [[dependencies.dbmee]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21.11,)"
+versionRange = "[21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.dbmee]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.11,)"
+versionRange = "[1.21.1,)"
 ordering = "NONE"
 side = "BOTH"

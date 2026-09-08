@@ -31,11 +31,11 @@ Examples:
 
 - Fabric API
 - Mod Menu *(optional)*
-- Java 25 or newer
+- (26.x) Java 25 or newer
 
 ### NeoForge
 
-- Java 25 or newer
+- (26.x) Java 25 or newer
 
 ---
 
