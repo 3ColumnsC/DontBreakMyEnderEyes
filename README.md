@@ -22,6 +22,7 @@ Examples:
 - `0.0` — never break (mod default)
 - `0.2` — vanilla (20% chance to break)
 - `1.0` — always break
+
 ---
 
 ## 📦 Requirements
@@ -30,11 +31,11 @@ Examples:
 
 - Fabric API
 - Mod Menu *(optional)*
-- Java 25 or newer
+- (26.x) Java 25 or newer
 
 ### NeoForge
 
-- Java 25 or newer
+- (26.x) Java 25 or newer
 
 ---
 
