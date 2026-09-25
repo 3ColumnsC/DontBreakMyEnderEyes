@@ -2,7 +2,7 @@
 
 ---
 
-A lightweight mod for Fabric and NeoForge that makes thrown Eyes of Ender never break. Configurable shatter chance..
+A lightweight mod for Fabric and NeoForge that makes thrown Eyes of Ender never break. Configurable shatter chance.
 
 **No more broken eyes**: by default, every thrown Eye of Ender drops as an item instead of shattering when it expires
 
@@ -14,14 +14,15 @@ A lightweight mod for Fabric and NeoForge that makes thrown Eyes of Ender never 
 
 Config file: `config/dbmee.json`
 
-| Option | Range | Default | Description                                                                                                    |
-|---|---|---|----------------------------------------------------------------------------------------------------------------|
-| `shatterChance` | 0.0 - 1.0 | 0.0 | Probability that a thrown Eye of Ender breaks instead of dropping as an item when it expires. |
+| Option          | Range | Default | Description                                                                                   |
+|-----------------|---------------|---------|-----------------------------------------------------------------------------------------------|
+| `shatterChance` | 0.0 - 1.0     | 0.0     | Probability that a thrown Eye of Ender breaks instead of dropping as an item when it expires. |
 
 Examples:
 - `0.0` — never break (mod default)
 - `0.2` — vanilla (20% chance to break)
 - `1.0` — always break
+
 ---
 
 ## 📦 Requirements
@@ -29,12 +30,25 @@ Examples:
 ### Fabric
 
 - Fabric API
-- Mod Menu *(optional)*
-- Java 25 or newer
+- Mod Menu (optional)
+- (26.x) Java 25 or newer
 
 ### NeoForge
 
-- Java 25 or newer
+- (26.x) Java 25 or newer
+
+---
+
+## 💬 Suggestions & Issues
+
+If you have an idea, a suggestion, or found a bug, feel free to leave a comment on the CurseForge page or open an issue on the GitHub repository.
+
+---
+
+## ❓ FAQ
+
+**Can I use this mod in a public modpack?** <br>
+Yes! You're free to include it in any public or private modpack, no permission needed.
 
 ---
 
