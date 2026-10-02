@@ -1,0 +1,8 @@
+{
+  "dbmee.config.title": "Don't Break My Ender Eyes",
+  "dbmee.config.tab.general": "Общие",
+  "dbmee.config.shatter_chance": "Шанс разрушения",
+  "dbmee.config.shatter_chance.value": "%s: %s",
+  "dbmee.config.server_side": "На сервере используется конфигурация сервера. 0% = никогда не разрушается - 20% = ванилла - 100% = всегда разрушается",
+  "dbmee.config.apply": "Применить"
+}
