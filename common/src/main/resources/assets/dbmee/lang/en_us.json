@@ -1,0 +1,8 @@
+{
+  "dbmee.config.title": "Don't Break My Ender Eyes",
+  "dbmee.config.tab.general": "General",
+  "dbmee.config.shatter_chance": "Shatter chance",
+  "dbmee.config.shatter_chance.value": "%s: %s",
+  "dbmee.config.server_side": "On a server, the server's config is used. 0% = never break - 20% = vanilla - 100% = always break",
+  "dbmee.config.apply": "Apply"
+}
