@@ -12,6 +12,10 @@ A lightweight mod for Fabric and NeoForge that makes thrown Eyes of Ender never 
 
 ## ⚙️ Configuration
 
+On **NeoForge** you can also change it in-game. Open the mods list and click **Config**. The screen has a single slider for the shatter chance, and changes apply immediately.
+
+On **Fabric** there is no in-game screen.
+
 Config file: `config/dbmee.json`
 
 | Option          | Range | Default | Description                                                                                   |
@@ -19,9 +23,9 @@ Config file: `config/dbmee.json`
 | `shatterChance` | 0.0 - 1.0     | 0.0     | Probability that a thrown Eye of Ender breaks instead of dropping as an item when it expires. |
 
 Examples:
-- `0.0` — never break (mod default)
-- `0.2` — vanilla (20% chance to break)
-- `1.0` — always break
+- `0.0`: never break (mod default)
+- `0.2`: vanilla (20% chance to break)
+- `1.0`: always break
 
 ---
 
