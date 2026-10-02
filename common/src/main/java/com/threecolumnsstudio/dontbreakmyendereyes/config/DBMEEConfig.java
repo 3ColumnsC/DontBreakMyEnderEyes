@@ -20,6 +20,7 @@ public record DBMEEConfig(float shatterChance) {
     private static final Logger LOGGER = LoggerFactory.getLogger(DBMEEConstants.MOD_NAME);
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static volatile DBMEEConfig instance = new DBMEEConfig(DEFAULT_SHATTER_CHANCE);
+    private static volatile Path configDir;
 
     public DBMEEConfig {
         shatterChance = Math.clamp(shatterChance, MIN_SHATTER_CHANCE, MAX_SHATTER_CHANCE);
@@ -29,8 +30,9 @@ public record DBMEEConfig(float shatterChance) {
         return instance;
     }
 
-    public static void load(Path configDir) {
-        Path configFile = configDir.resolve(DBMEEConstants.CONFIG_FILE);
+    public static void load(Path dir) {
+        configDir = dir;
+        Path configFile = dir.resolve(DBMEEConstants.CONFIG_FILE);
         DBMEEConfig loaded;
         if (Files.exists(configFile)) {
             loaded = read(configFile);
@@ -42,12 +44,21 @@ public record DBMEEConfig(float shatterChance) {
         LOGGER.info("Loaded config: shatterChance={}", loaded.shatterChance());
     }
 
+    public static void save(float shatterChance) {
+        DBMEEConfig config = new DBMEEConfig(shatterChance);
+        instance = config;
+        Path dir = configDir;
+        if (dir != null) {
+            write(dir.resolve(DBMEEConstants.CONFIG_FILE), config);
+        }
+    }
+
     private static DBMEEConfig read(Path configFile) {
         try (Reader reader = Files.newBufferedReader(configFile)) {
             DBMEEConfig parsed = GSON.fromJson(reader, DBMEEConfig.class);
             return parsed != null ? parsed : new DBMEEConfig(DEFAULT_SHATTER_CHANCE);
         } catch (IOException | RuntimeException e) {
-            LOGGER.warn("Could not read config {}, using defaults", configFile, e);
+            LOGGER.warn("Could not read config {} ({}), using defaults", configFile.getFileName(), e.getClass().getSimpleName());
             return new DBMEEConfig(DEFAULT_SHATTER_CHANCE);
         }
     }
@@ -59,7 +70,7 @@ public record DBMEEConfig(float shatterChance) {
                 GSON.toJson(config, writer);
             }
         } catch (IOException e) {
-            LOGGER.warn("Could not write default config {}", configFile, e);
+            LOGGER.warn("Could not write config {} ({})", configFile.getFileName(), e.getClass().getSimpleName());
         }
     }
 }
